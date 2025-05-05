@@ -14,6 +14,10 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
+            $table->string('location')->nullable(); // Added for location
+            $table->string('value')->nullable(); // Added for value (using string to accommodate format like "৳15.07 Crores")
+            $table->string('monitoring_body')->nullable(); // Added for monitoring body
+            $table->string('image')->nullable(); // Added for image path/filename
             $table->unsignedBigInteger('user_id'); //column type
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnUpdate()->restrictOnDelete();
             $table->timestamps();
