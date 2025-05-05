@@ -70,8 +70,9 @@ export default {
                 <span
                     class="text-xl font-semibold whitespace-nowrap"
                     :class="{ 'lg:hidden': !sidebarOpen }"
-                    >RAK-bmw</span
                 >
+                    <Link href="/">RAK-bmw</Link>
+                </span>
                 <button
                     @click="toggleSidebar"
                     class="py-1 px-3 rounded-lg hover:bg-blue-400"
@@ -102,26 +103,30 @@ export default {
                             >Dashboard</span
                         >
                     </Link>
+                    <!-- Category -->
 
-                    <!-- Posts -->
                     <Link
-                        href="/"
+                        href="/dashboard/categories"
                         class="flex items-center p-3 rounded-lg hover:bg-blue-400 cursor-pointer"
-                        :class="{ 'bg-blue-800': $page.url === '/' }"
+                        :class="{
+                            'bg-blue-800':
+                                $page.url === '/dashboard/categories',
+                        }"
                     >
-                        <i class="fa fa-file-text"></i>
+                        <i class="fa fa-tags"></i>
                         <span
                             class="ml-3 whitespace-nowrap"
                             :class="{ 'lg:hidden': !sidebarOpen }"
-                            >Home</span
+                            >Categories</span
                         >
                     </Link>
-
                     <!-- Projects -->
                     <Link
-                        href="/projects"
+                        href="/dashboard/projects"
                         class="flex items-center p-3 rounded-lg hover:bg-blue-400 cursor-pointer"
-                        :class="{ 'bg-blue-800': $page.url === '/projects' }"
+                        :class="{
+                            'bg-blue-800': $page.url === '/dashboard/projects',
+                        }"
                     >
                         <i class="fa fa-cubes"></i>
                         <span
@@ -133,9 +138,11 @@ export default {
 
                     <!-- Blogs -->
                     <Link
-                        href="/blogs"
+                        href="/dashboard/blogs"
                         class="flex items-center p-3 rounded-lg hover:bg-blue-400 cursor-pointer"
-                        :class="{ 'bg-blue-800': $page.url === '/blogs' }"
+                        :class="{
+                            'bg-blue-800': $page.url === '/dashboard/blogs',
+                        }"
                     >
                         <i class="fa fa-rss"></i>
                         <span
@@ -147,9 +154,11 @@ export default {
 
                     <!-- Services -->
                     <Link
-                        href="/services"
+                        href="/dashboard/services"
                         class="flex items-center p-3 rounded-lg hover:bg-blue-400 cursor-pointer"
-                        :class="{ 'bg-blue-800': $page.url === '/services' }"
+                        :class="{
+                            'bg-blue-800': $page.url === '/dashboard/services',
+                        }"
                     >
                         <i class="fa fa-gears"></i>
                         <span

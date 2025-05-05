@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class CategoryController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $projects = Category::with('user')->get();
-        return Inertia::render('CategoriesPage', ['projects' => $projects]);
+        $projects = Service::with('user')->get();
+        return Inertia::render('ServicesPage', ['projects' => $projects]);
 
     }
 
@@ -37,7 +37,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show(Service $service)
     {
         //
     }
@@ -45,7 +45,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit(Service $service)
     {
         //
     }
@@ -53,7 +53,7 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Service $service)
     {
         //
     }
@@ -61,7 +61,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Service $service)
     {
         //
     }
