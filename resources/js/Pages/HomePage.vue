@@ -1,11 +1,11 @@
 <script setup>
 import NavLayout from "../Layouts/NavLayout.vue";
 import { Link } from "@inertiajs/vue3";
-import Hero from "../Components/Hero.vue";
-import Services from "../Components/Services.vue";
-import Projects from "../Components/Projects.vue";
-import Testimonials from "../Components/Testimonials.vue";
-import CTA from "../Components/CTA.vue";
+import Hero from "../Components/Home/Hero.vue";
+import Services from "../Components/Home/Services.vue";
+import Projects from "../Components/Home/Projects.vue";
+import Testimonials from "../Components/Home/Testimonials.vue";
+import CTA from "../Components/Home/CTA.vue";
 </script>
 
 <template>

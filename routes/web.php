@@ -37,11 +37,12 @@ Route::get('/dashboard/blogs', [BlogController::class, 'index'])->name('blog.ind
 
 //Categories CRUD routes
 
-Route::get('/dashboard/categories', [CategoryController::class, 'index'])->name('category.index');
-// Route::get('/dashboard/categories/create', [CategoryController::class, 'create'])->name('category.create');
-// Route::post('/dashboard/categories', [CategoryController::class, 'store'])->name('category.store');
-// Route::get('/dashboard/categories/{id}', [CategoryController::class, 'show'])->name('category.show');
-// Route::get('/dashboard/categories/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
+Route::get('/dashboard/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/dashboard/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::post('/dashboard/categories', [CategoryController::class, 'store'])->name('category.store');
+Route::get('/dashboard/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+Route::put('/dashboard/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
+Route::delete('/dashboard/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
 // Services CRUD routes
 
