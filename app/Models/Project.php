@@ -13,6 +13,14 @@ class Project extends Model
         'value',
         'monitoring_body',
         'image',
+        'status',
+        'category_id',
+        'user_id',
+    ];
+
+
+    protected $hidden = [
+        'category_id',
         'user_id',
     ];
 

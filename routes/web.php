@@ -18,8 +18,8 @@ Route::get('/dashboard', function () {
 
 // Projects CRUD routes
 Route::get('/dashboard/projects', [ProjectController::class, 'index'])->name('project.index');
-// Route::get('/dashboard/projects/create', [ProjectController::class, 'create'])->name('project.create');
-// Route::post('/dashboard/projects', [ProjectController::class, 'store'])->name('project.store');
+Route::get('/dashboard/projects/create', [ProjectController::class, 'create'])->name('project.create');
+Route::post('/dashboard/projects', [ProjectController::class, 'store'])->name('project.store');
 // Route::get('/dashboard/projects/{id}', [ProjectController::class, 'show'])->name('project.show');
 // Route::get('/dashboard/projects/{id}/edit', [ProjectController::class, 'edit'])->name('project.edit');
 // Route::put('/dashboard/projects/{id}', [ProjectController::class, 'update'])->name('project.update');
@@ -45,6 +45,4 @@ Route::put('/dashboard/categories/{id}', [CategoryController::class, 'update'])-
 Route::delete('/dashboard/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
 // Services CRUD routes
-
-
 Route::get('/dashboard/services', [ServiceController::class, 'index'])->name('blog.index');

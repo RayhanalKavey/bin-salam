@@ -18,6 +18,8 @@ return new class extends Migration {
             $table->string('value')->nullable(); // Added for value (using string to accommodate format like "৳15.07 Crores")
             $table->string('monitoring_body')->nullable(); // Added for monitoring body
             $table->string('image')->nullable(); // Added for image path/filename
+            $table->string('status')->default('pending'); // Added for project status
+
             //foreign key column
             $table->unsignedBigInteger('category_id')->nullable(); // Define column type and make it nullable
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null'); // Define constraint
