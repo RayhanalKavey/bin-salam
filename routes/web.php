@@ -11,12 +11,17 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('HomePage');
 });
+Route::get('/faq', function () {
+    return Inertia::render('FaqPage');
+});
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard.page');
 
 
 // Projects CRUD routes
+Route::get('/projects', [ProjectController::class, 'allProjects'])->name('project.page');
+
 Route::get('/dashboard/projects', [ProjectController::class, 'index'])->name('project.index');
 Route::get('/dashboard/projects/create', [ProjectController::class, 'create'])->name('project.create');
 Route::post('/dashboard/projects', [ProjectController::class, 'store'])->name('project.store');
@@ -26,6 +31,7 @@ Route::post('/dashboard/projects', [ProjectController::class, 'store'])->name('p
 // Route::delete('/dashboard/projects/{id}', [ProjectController::class, 'destroy'])->name('profile.destroy');
 
 //Blogs CRUD routes
+Route::get('/blog', [BlogController::class, 'allBlogs'])->name('blog.page');
 
 Route::get('/dashboard/blogs', [BlogController::class, 'index'])->name('blog.index');
 // Route::get('/dashboard/blogs/create', [BlogController::class, 'create'])->name('blog.create');

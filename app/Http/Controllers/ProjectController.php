@@ -13,6 +13,11 @@ class ProjectController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function allProjects()
+    {
+        return Inertia::render('Project/AllProjects');
+
+    }
     public function index()
     {
         $projects = Project::latest()->get();

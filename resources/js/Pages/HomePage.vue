@@ -1,5 +1,5 @@
 <script setup>
-import NavLayout from "../Layouts/NavLayout.vue";
+import NavLayout from "../Layouts/NavLayout.vue"; // Assuming NavLayout is correctly imported
 import { Link } from "@inertiajs/vue3";
 import Hero from "../Components/Sections/Hero.vue";
 import Services from "../Components/Sections/Services.vue";
@@ -7,6 +7,32 @@ import Projects from "../Components/Sections/Projects.vue";
 import Testimonials from "../Components/Sections/Testimonials.vue";
 import CTA from "../Components/Sections/CTA.vue";
 import Leadership from "../Components/Sections/Leadership.vue";
+import Faq from "../Components/Sections/Faq.vue";
+import Blog from "../Components/Sections/Blog.vue";
+import { ref, onMounted, onUnmounted } from "vue";
+
+const showScrollToTopButton = ref(false);
+
+const handleScroll = () => {
+    if (window.pageYOffset > 300) {
+        // Show button after scrolling 300px
+        showScrollToTopButton.value = true;
+    } else {
+        showScrollToTopButton.value = false;
+    }
+};
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+onMounted(() => {
+    window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
@@ -15,8 +41,33 @@ import Leadership from "../Components/Sections/Leadership.vue";
         <Leadership />
         <Services />
         <Projects />
+        <Faq />
+        <Blog />
         <!-- <Testimonials /> -->
         <CTA />
+
+        <!-- Scroll to Top Button -->
+        <button
+            v-if="showScrollToTopButton"
+            @click="scrollToTop"
+            class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-300 ease-in-out z-50"
+            aria-label="Scroll to top"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 11l7-7 7 7M5 19l7-7 7 7"
+                />
+            </svg>
+        </button>
     </NavLayout>
 </template>
 

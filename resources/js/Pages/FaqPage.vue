@@ -1,11 +1,11 @@
 <script setup>
-import Blog from "../Components/Sections/Blog.vue";
+import Faq from "../Components/Sections/Faq.vue";
 import NavLayout from "../Layouts/NavLayout.vue";
 </script>
 
 <template>
     <NavLayout>
-        <Blog></Blog>
+        <Faq></Faq>
     </NavLayout>
 </template>
 

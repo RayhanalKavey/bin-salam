@@ -11,6 +11,11 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function allBlogs()
+    {
+        return Inertia::render('Blog/AllBlogPage');
+
+    }
     public function index()
     {
         $projects = Blog::with('user')->get();
