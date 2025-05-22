@@ -5,7 +5,7 @@ import { Link } from "@inertiajs/vue3";
 <template>
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Bin Salam Logistics</h3>
                     <p class="text-gray-400">
@@ -43,7 +43,7 @@ import { Link } from "@inertiajs/vue3";
                         <li class="text-gray-400">Cumilla, Bangladesh</li>
                     </ul>
                 </div>
-                <div>
+                <!-- <div>
                     <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
                         <a
@@ -60,9 +60,8 @@ import { Link } from "@inertiajs/vue3";
                                 />
                             </svg>
                         </a>
-                        <!-- Add other social icons -->
                     </div>
-                </div>
+                </div> -->
             </div>
             <div
                 class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"

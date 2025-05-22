@@ -1,5 +1,7 @@
 <script setup>
 import { Link } from "@inertiajs/vue3";
+import { ref } from "vue";
+const isMenuOpen = ref(false);
 </script>
 
 <template>
@@ -79,33 +81,35 @@ import { Link } from "@inertiajs/vue3";
             <div
                 class="px-4 pt-2 pb-4 space-y-4 bg-gray-800 absolute z-20 right-0 w-50 top-20"
             >
-                <a
+                <Link
                     href="/"
                     class="block text-gray-300 hover:text-blue-400 transition-colors duration-300"
                 >
                     Home
-                </a>
-                <a
+                </Link>
+                <Link
                     href="/projects"
                     class="block text-gray-300 hover:text-blue-400 transition-colors duration-300"
                 >
                     Projects
-                </a>
-                <a
+                </Link>
+                <Link
                     href="/blog"
                     class="block text-gray-300 hover:text-blue-400 transition-colors duration-300"
                 >
                     Blogs
-                </a>
-                <a
-                    href="/contact"
-                    class="block text-gray-300 hover:text-blue-400 transition-colors duration-300"
-                >
-                    Contact
-                </a>
+                </Link>
             </div>
         </div>
     </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* Smooth transitions for mobile menu */
+.transition-all {
+    overflow: hidden;
+    transition-property: max-height, opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+</style>

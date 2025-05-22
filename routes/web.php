@@ -32,6 +32,7 @@ Route::post('/dashboard/projects', [ProjectController::class, 'store'])->name('p
 
 //Blogs CRUD routes
 Route::get('/blog', [BlogController::class, 'allBlogs'])->name('blog.page');
+Route::get('/blogDetails/{id}', [BlogController::class, 'blogDetails'])->name('blog.blogDetailsPage');
 
 Route::get('/dashboard/blogs', [BlogController::class, 'index'])->name('blog.index');
 // Route::get('/dashboard/blogs/create', [BlogController::class, 'create'])->name('blog.create');

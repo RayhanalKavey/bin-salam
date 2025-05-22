@@ -16,6 +16,12 @@ class BlogController extends Controller
         return Inertia::render('Blog/AllBlogPage');
 
     }
+    public function blogDetails(Request $request, $id)
+    {
+        return Inertia::render('Blog/BlogDetails', ['blogId' => $id]);
+
+    }
+
     public function index()
     {
         $projects = Blog::with('user')->get();

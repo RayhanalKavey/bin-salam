@@ -8,7 +8,7 @@ const blogPosts = ref([
         title: "Bin Salam Completes Key Infrastructure Project in Cumilla",
         excerpt:
             "We recently concluded a major road construction project in Titas Upazila, Cumilla, enhancing connectivity and supporting regional development. Read about the challenges and successes of this significant undertaking.",
-        link: "#0", // Replace with actual blog post link
+        link: "/blogDetails/1",
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ const blogPosts = ref([
         title: "The Role of Electro-Mechanical Expertise in Modern Logistics",
         excerpt:
             "Explore how our specialized Electro-Mechanical Division contributes to efficient and reliable logistics operations, from vehicle assembly to complex power infrastructure installations.",
-        link: "#0", // Replace with actual blog post link
+        link: "/blogDetails/2",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const blogPosts = ref([
         title: "Partnering for Progress: Our Work with Government Agencies",
         excerpt:
             "Bin Salam Logistics is proud to support national development through successful partnerships and completed projects for various government bodies, including LGED and Bangladesh Railway.",
-        link: "#0", // Replace with actual blog post link
+        link: "/blogDetails/3",
     },
 ]);
 </script>
