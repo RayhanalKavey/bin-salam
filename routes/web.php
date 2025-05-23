@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Models\Service;
@@ -10,7 +11,7 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('HomePage');
-});
+})->name('home.page');
 Route::get('/faq', function () {
     return Inertia::render('FaqPage');
 });
@@ -53,3 +54,9 @@ Route::delete('/dashboard/categories/{id}', [CategoryController::class, 'destroy
 
 // Services CRUD routes
 Route::get('/dashboard/services', [ServiceController::class, 'index'])->name('blog.index');
+
+// Contact
+Route::get('/dashboard/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/contact', [ContactController::class, 'create'])->name('contact.page');
+Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
+Route::delete('/dashboard/contact/{contact}', [ContactController::class, 'destroy'])->name('contact.destroy');

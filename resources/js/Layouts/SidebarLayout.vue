@@ -151,6 +151,21 @@ export default {
                             >Blogs</span
                         >
                     </Link>
+                    <!-- Contacts -->
+                    <Link
+                        href="/dashboard/contact"
+                        class="flex items-center p-3 rounded-lg hover:bg-blue-400 cursor-pointer"
+                        :class="{
+                            'bg-blue-800': $page.url === '/dashboard/contact',
+                        }"
+                    >
+                        <i class="fa fa-rss"></i>
+                        <span
+                            class="ml-3 whitespace-nowrap"
+                            :class="{ 'lg:hidden': !sidebarOpen }"
+                            >Contacts</span
+                        >
+                    </Link>
 
                     <!-- Services -->
                     <Link

@@ -41,12 +41,18 @@ const isMenuOpen = ref(false);
                     >
                         FAQ
                     </Link>
-                    <!-- <Link
+                    <Link
+                        href="/contact"
+                        class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                    >
+                        Contact Us
+                    </Link>
+                    <Link
                         href="/dashboard"
                         class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
                     >
                         Dashboard
-                    </Link> -->
+                    </Link>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -98,6 +104,12 @@ const isMenuOpen = ref(false);
                     class="block text-gray-300 hover:text-blue-400 transition-colors duration-300"
                 >
                     Blogs
+                </Link>
+                <Link
+                    href="/contact"
+                    class="block text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                >
+                    Contact Us
                 </Link>
             </div>
         </div>
